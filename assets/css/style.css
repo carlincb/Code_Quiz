@@ -1,0 +1,49 @@
+/* General framework for paper layout set. No margins or fonts by default. Default fonts set. */
+* {
+    margin: 0;
+    padding: 0;  
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+/* Default size of font set. */
+html {
+    font-size: 62.5%;
+    }
+/* Background color of webpage set. */
+body {
+    background-color: rgb(246, 249, 252);
+    }
+
+header {
+   display: flex;
+   justify-content: flex-end;
+   margin-right: 1.5rem;
+   font-size: 1.5rem;
+   color:cadetblue;
+   height: 5%;
+   width: 95%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+    margin-left: 1.5rem;
+    height: 95%;
+    width: 95%;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 1rem;
+    color:cadetblue;
+}
+
+button {
+    background-color: cadetblue;
+    border-radius: .5rem;
+    border: .1rem solid gray;
+    padding: 1rem;
+    width:fit-content;
+    height:fit-content;
+}
