@@ -47,7 +47,18 @@ p {
 h2 {
     margin: 1rem;
 }
+#questionContainer {
+    display: none;
+}
 
+#answerFeedback {
+    border-top: .15rem solid black;
+    color:darkgray;
+    font-style: italic;
+}
+#finalScore {
+    display: none;
+}
 button {
     background-color: cadetblue;
     border-radius: .5rem;
