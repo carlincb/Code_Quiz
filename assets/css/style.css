@@ -48,7 +48,7 @@ h2 {
     margin: 1rem;
 }
 
-#questionContainer {
+#questionContainer, #question1, #question2, #question3, #question4, #finalScore, #highscores {
     display: none;
 }
 
@@ -56,14 +56,6 @@ h2 {
     border-top: .15rem solid black;
     color:darkgray;
     font-style: italic;
-}
-
-#finalScore {
-    display: none;
-}
-
-#highscores {
-    display: none;
 }
 
 button {

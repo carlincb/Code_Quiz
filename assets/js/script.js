@@ -15,7 +15,7 @@ var btn1A = document.getElementById("option1A");
 var btn1B = document.getElementById("option1B");
 var btn1C = document.getElementById("option1C");
 var btn1D = document.getElementById("option1D");
-var answerFeedback1 = document.getElementById("answerFeedback1");
+var answerFeedback = document.getElementById("answerFeedback");
 
 var btn2A = document.getElementById("option2A");
 var btn2B = document.getElementById("option2B");
@@ -44,13 +44,93 @@ var submitButton = document.getElementById("submitButton");
 var goBackButton = document.getElementById("goBackButton");
 var clearHighScores = document.getElementById("clearHighscores");
 
+var timeLeft = 60;
+var userScore = 0;
+
+var mainPage = document.getElementById("mainPage");
+var questionContainer = document.getElementById("questionContainer");
+var initials = document.getElementById("initials");
+
 // Start Quiz Button Linked
 startQuizButton.addEventListener("click", function(){
+    mainPage.style.display = "none";
+    questionContainer.style.display = "block";
+    question1.style.display = "block";
+    displayTime();
+});
 
+btn1A.addEventListener("click", function(){
+    userScore = timeLeft;
+    answerFeedback.textContent = "Right!";
+    question1.style.display = "none";
+    question2.style.display = "block";
+    quizOver();
+});
+
+btn1B.addEventListener("click", function(){
+    timeLeft-=10;
+    userScore = timeLeft;
+    answerFeedback.textContent = "Wrong!";
+    question1.style.display = "none";
+    question2.style.display = "block";
+    quizOver();
+});
+
+btn1C.addEventListener("click", function(){
+    timeLeft-=10;
+    userScore = timeLeft;
+    answerFeedback.textContent = "Wrong!";
+    question1.style.display = "none";
+    question2.style.display = "block";
+    quizOver();
+});
+
+btn1D.addEventListener("click", function(){
+    timeLeft-=10;
+    userScore = timeLeft;
+    answerFeedback.textContent = "Wrong!";
+    question1.style.display = "none";
+    // question2.style.display = "block";
+    quizOver();
+});
+
+function quizOver(){
+    questionContainer.style.display = "none";
+    finalScorePage.style.display = "block";
+    timerInput.style.display = "none";
+    console.log(userScore);
+};
+
+function displayTime(){
+    timerInput.textContent = timeLeft;
+    var timeCount = setInterval (function(){
+        timeLeft--;
+        timerInput.textContent = timeLeft;
+    }, 1000);
+    if(timeLeft<=0){
+        quizOver();
+        clearInterval(timeCount);
+    };
+};
+
+var endScores = JSON.parse(localStorage.getItem("scores"));
+if (endScores) {
+  endScores = JSON.parse(localStorage.getItem("scores"));
+} else {
+  endScores = [];
+};
+
+submitButton.addEventListener("click", function(){
+    var userInitials = initials.value;
+    console.log(userInitials);
+    endScores.push({
+        initials: userInitials,
+        score: userScore,
+    });
+    localStorage.setItem("scores", JSON.stringify(endScores));
 });
 
 // Create Timer Function
-
 // Create Question/Answer/Feedback Function
 // Create Score Tracker Function
 // Create Function to Save/Clear Highscores
