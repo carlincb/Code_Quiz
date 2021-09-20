@@ -16,7 +16,7 @@
         <nav>
             <ul>
                 <li>View Highscores</li>
-                <li>Time:</li>
+                <li>Time:<span id="countdown"></span></li>
             </ul>
         </nav>
     </header>
@@ -25,16 +25,16 @@
         <section id="mainPage">
             <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your scoretime by ten seconds!
             </p>
-            <button>Start Quiz</button>
+            <button id="startQuizButton">Start Quiz</button>
         </section>
         <section id="questionContainer">
-            <h2></h2>
-            <ol>
-                <button></button>
-                <button></button>
-                <button></button>
-                <button></button>
-            </ol>
+            <h2 id="question"></h2>
+            <ul>
+                <button id="optionA"></button>
+                <button id="optionB"></button>
+                <button id="optionC"></button>
+                <button id="optionD"></button>
+            </ul>
             <p id="answerFeedback">Right/Wrong</p>
         </section>
         <section id="finalScore">
@@ -44,6 +44,13 @@
                 <input type="text" id="initials" name:="initials"/>
             </form>
             <button>Submit</button>
+        </section>
+        <section id="highscores">
+            <h2>Highscores</h2>
+            <ul>
+                <button>Go Back</button>
+                <button>Clear Highscores</button>
+            </ul>
         </section>
     </main>
     <!-- Added javascript link. -->
