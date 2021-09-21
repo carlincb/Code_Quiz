@@ -40,11 +40,7 @@ h1 {
     color:cadetblue;
 }
 
-p {
-    margin: 1rem;
-}
-
-h2 {
+p, h2 {
     margin: 1rem;
 }
 
