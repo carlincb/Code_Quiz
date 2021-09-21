@@ -1,4 +1,4 @@
-// Defined global variables.
+// Defined global variables:
 var startQuizButton = document.getElementById("startQuizButton");
 var submitButton = document.getElementById("submitButton");
 var goBackButton = document.getElementById("goBackButton");
@@ -45,57 +45,16 @@ var btn4B = document.getElementById("option4B");
 var btn4C = document.getElementById("option4C");
 var btn4D = document.getElementById("option4D");
 
+// Right or Wrong options variable.
 var answerFeedback = document.getElementById("answerFeedback");
 
-// Start Quiz Button Linked
+// Start Quiz Button Linked.
 startQuizButton.addEventListener("click", function(){
     mainPage.style.display = "none";
     questionContainer.style.display = "block";
     question1.style.display = "block";
     displayTime();
 });
-
-btn1A.addEventListener("click", function(){
-    userScore = timeLeft;
-    answerFeedback.textContent = "Right!";
-    question1.style.display = "none";
-    question2.style.display = "block";
-    quizOver();
-});
-
-btn1B.addEventListener("click", function(){
-    timeLeft-=10;
-    userScore = timeLeft;
-    answerFeedback.textContent = "Wrong!";
-    question1.style.display = "none";
-    question2.style.display = "block";
-    quizOver();
-});
-
-btn1C.addEventListener("click", function(){
-    timeLeft-=10;
-    userScore = timeLeft;
-    answerFeedback.textContent = "Wrong!";
-    question1.style.display = "none";
-    question2.style.display = "block";
-    quizOver();
-});
-
-btn1D.addEventListener("click", function(){
-    timeLeft-=10;
-    userScore = timeLeft;
-    answerFeedback.textContent = "Wrong!";
-    question1.style.display = "none";
-    // question2.style.display = "block";
-    quizOver();
-});
-
-function quizOver(){
-    questionContainer.style.display = "none";
-    finalScorePage.style.display = "block";
-    timerInput.style.display = "none";
-    console.log(userScore);
-};
 
 // Timer function 
 function displayTime(){
@@ -108,6 +67,142 @@ function displayTime(){
         quizOver();
         clearInterval(timeCount);
     };
+};
+
+// Question 1 options.
+btn1A.addEventListener("click", function(){
+    userScore = timeLeft;
+    answerFeedback.textContent = "Right!";
+    question1.style.display = "none";
+    question2.style.display = "block";
+});
+
+btn1B.addEventListener("click", function(){
+    timeLeft-=10;
+    userScore = timeLeft;
+    answerFeedback.textContent = "Wrong!";
+    question1.style.display = "none";
+    question2.style.display = "block";
+
+});
+
+btn1C.addEventListener("click", function(){
+    timeLeft-=10;
+    userScore = timeLeft;
+    answerFeedback.textContent = "Wrong!";
+    question1.style.display = "none";
+    question2.style.display = "block";
+});
+
+btn1D.addEventListener("click", function(){
+    timeLeft-=10;
+    userScore = timeLeft;
+    answerFeedback.textContent = "Wrong!";
+    question1.style.display = "none";
+    question2.style.display = "block";
+});
+
+// Question 2 options.
+btn2A.addEventListener("click", function(){
+    userScore = timeLeft;
+    answerFeedback.textContent = "Wrong!";
+    question2.style.display = "none";
+    question3.style.display = "block";
+});
+
+btn2B.addEventListener("click", function(){
+    timeLeft-=10;
+    userScore = timeLeft;
+    answerFeedback.textContent = "Wrong!";
+    question2.style.display = "none";
+    question3.style.display = "block";
+});
+
+btn2C.addEventListener("click", function(){
+    timeLeft-=10;
+    userScore = timeLeft;
+    answerFeedback.textContent = "Right!";
+    question2.style.display = "none";
+    question3.style.display = "block";
+});
+
+btn2D.addEventListener("click", function(){
+    timeLeft-=10;
+    userScore = timeLeft;
+    answerFeedback.textContent = "Wrong!";
+    question2.style.display = "none";
+    question3.style.display = "block";
+});
+
+// Question 3 options.
+btn3A.addEventListener("click", function(){
+    userScore = timeLeft;
+    answerFeedback.textContent = "Wrong!";
+    question3.style.display = "none";
+    question4.style.display = "block";
+});
+
+btn3B.addEventListener("click", function(){
+    timeLeft-=10;
+    userScore = timeLeft;
+    answerFeedback.textContent = "Right!";
+    question3.style.display = "none";
+    question4.style.display = "block";
+});
+
+btn3C.addEventListener("click", function(){
+    timeLeft-=10;
+    userScore = timeLeft;
+    answerFeedback.textContent = "Wrong!";
+    question3.style.display = "none";
+    question4.style.display = "block";
+});
+
+btn3D.addEventListener("click", function(){
+    timeLeft-=10;
+    userScore = timeLeft;
+    answerFeedback.textContent = "Wrong!";
+    question3.style.display = "none";
+    question4.style.display = "block";
+});
+
+// Question 4 options.
+btn4A.addEventListener("click", function(){
+    userScore = timeLeft;
+    answerFeedback.textContent = "Right!";
+    question4.style.display = "none";
+    quizOver();
+});
+
+btn4B.addEventListener("click", function(){
+    timeLeft-=10;
+    userScore = timeLeft;
+    answerFeedback.textContent = "Wrong!";
+    question4.style.display = "none";
+    quizOver();
+});
+
+btn4C.addEventListener("click", function(){
+    timeLeft-=10;
+    userScore = timeLeft;
+    answerFeedback.textContent = "Wrong!";
+    question4.style.display = "none";
+    quizOver();
+});
+
+btn4D.addEventListener("click", function(){
+    timeLeft-=10;
+    userScore = timeLeft;
+    answerFeedback.textContent = "Wrong!";
+    question4.style.display = "none";
+    quizOver();
+});
+
+// Quiz over function for when user has finished questions or time has run out.
+function quizOver(){
+    questionContainer.style.display = "none";
+    finalScorePage.style.display = "block";
+    timerInput.style.display = "none";
 };
 
 // Score calculation function.
