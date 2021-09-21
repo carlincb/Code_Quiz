@@ -17,6 +17,7 @@ var userScore = 0;
 var finalScorePage = document.getElementById("finalScore");
 var highScorePage = document.getElementById("highscores");
 var scoreInput = document.getElementById("score");
+var results = document.getElementById("results");
 
 // Variables defined for questions.
 var question1 = document.getElementById("question1");
@@ -203,6 +204,7 @@ function quizOver(){
     questionContainer.style.display = "none";
     finalScorePage.style.display = "block";
     timerInput.style.display = "none";
+    // results.style.display = "block";
 };
 
 // Score calculation function.
@@ -216,10 +218,24 @@ if (endScores) {
 // Function saving scores and initials in local storage.
 submitButton.addEventListener("click", function(){
     var userInitials = initials.value;
-    console.log(userInitials);
     endScores.push({
         initials: userInitials,
         score: userScore,
     });
     localStorage.setItem("scores", JSON.stringify(endScores));
+    highScorePage.style.display = "block";
+    finalScorePage.style.display = "none";
 });
+
+clearHighScores.addEventListener("click", function(){
+    localStorage.clear();
+ });
+
+//  Function to return to main page.
+goBackButton.addEventListener("click", function(){
+    mainPage.style.display = "block";
+    highScorePage.style.display = "none";
+    location.reload();
+});
+
+
