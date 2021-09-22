@@ -106,6 +106,7 @@ btn1D.addEventListener("click", function(){
 
 // Question 2 options.
 btn2A.addEventListener("click", function(){
+    timeLeft-=10;
     userScore = timeLeft;
     answerFeedback.textContent = "Wrong!";
     question2.style.display = "none";
@@ -121,7 +122,6 @@ btn2B.addEventListener("click", function(){
 });
 
 btn2C.addEventListener("click", function(){
-    timeLeft-=10;
     userScore = timeLeft;
     answerFeedback.textContent = "Right!";
     question2.style.display = "none";
@@ -138,6 +138,7 @@ btn2D.addEventListener("click", function(){
 
 // Question 3 options.
 btn3A.addEventListener("click", function(){
+    timeLeft-=10;
     userScore = timeLeft;
     answerFeedback.textContent = "Wrong!";
     question3.style.display = "none";
@@ -145,7 +146,6 @@ btn3A.addEventListener("click", function(){
 });
 
 btn3B.addEventListener("click", function(){
-    timeLeft-=10;
     userScore = timeLeft;
     answerFeedback.textContent = "Right!";
     question3.style.display = "none";
@@ -215,7 +215,7 @@ if (endScores) {
   endScores = [];
 };
 
-// Function saving scores and initials in local storage.
+// Function saving scores and initials in local storage when I click "Submit."
 submitButton.addEventListener("click", function(){
     var userInitials = initials.value;
     endScores.push({
@@ -231,7 +231,7 @@ submitButton.addEventListener("click", function(){
         highscoreDiv.append(p);
     });
 });
-
+// Function saving scores and initials in local storage when I press "enter" instead of click "Submit."
 document.querySelector("#initials").addEventListener("keypress", function(event){
     if (event.key==="Enter"){
         event.preventDefault();
@@ -250,7 +250,7 @@ document.querySelector("#initials").addEventListener("keypress", function(event)
         });
     };
 });
-
+// Function to clear high scores from local storage and page.
 clearHighScores.addEventListener("click", function(){
     localStorage.clear();
     highscoreDiv.innerHTML="";
@@ -263,6 +263,7 @@ goBackButton.addEventListener("click", function(){
     location.reload();
 });
 
-
-highscoreDiv
-
+// results var 
+// Add event listener for click event on results
+// div bottom of page normally set to display none when click the li results var set this new div to display block
+// for each create p tag make inner HTML and append to new div tag
