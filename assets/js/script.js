@@ -18,6 +18,7 @@ var finalScorePage = document.getElementById("finalScore");
 var highScorePage = document.getElementById("highscores");
 var scoreInput = document.getElementById("score");
 var results = document.getElementById("results");
+var highscoreDiv = document.getElementById("highscoreDiv");
 
 // Variables defined for questions.
 var question1 = document.getElementById("question1");
@@ -204,7 +205,6 @@ function quizOver(){
     questionContainer.style.display = "none";
     finalScorePage.style.display = "block";
     timerInput.style.display = "none";
-    // results.style.display = "block";
 };
 
 // Score calculation function.
@@ -225,10 +225,35 @@ submitButton.addEventListener("click", function(){
     localStorage.setItem("scores", JSON.stringify(endScores));
     highScorePage.style.display = "block";
     finalScorePage.style.display = "none";
+    endScores.forEach(element => {
+        var p=document.createElement("p");
+        p.innerText = `Initials: ${element.initials} Score: ${element.score}`;
+        highscoreDiv.append(p);
+    });
+});
+
+document.querySelector("#initials").addEventListener("keypress", function(event){
+    if (event.key==="Enter"){
+        event.preventDefault();
+        var userInitials = initials.value;
+        endScores.push({
+            initials: userInitials,
+            score: userScore,
+        });
+        localStorage.setItem("scores", JSON.stringify(endScores));
+        highScorePage.style.display = "block";
+        finalScorePage.style.display = "none";
+        endScores.forEach(element => {
+            var p=document.createElement("p");
+            p.innerText = `Initials: ${element.initials} Score: ${element.score}`;
+            highscoreDiv.append(p);
+        });
+    };
 });
 
 clearHighScores.addEventListener("click", function(){
     localStorage.clear();
+    highscoreDiv.innerHTML="";
  });
 
 //  Function to return to main page.
@@ -238,4 +263,6 @@ goBackButton.addEventListener("click", function(){
     location.reload();
 });
 
+
+highscoreDiv
 

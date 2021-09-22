@@ -44,7 +44,7 @@ p, h2 {
     margin: 1rem;
 }
 
-#questionContainer, #question1, #question2, #question3, #question4, #finalScore, #highscores {
+#questionContainer, #question1, #question2, #question3, #question4, #finalScore, #highscores, #displayResultsDiv {
     display: none;
 }
 
