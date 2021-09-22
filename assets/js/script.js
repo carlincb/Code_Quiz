@@ -63,11 +63,11 @@ function displayTime(){
     var timeCount = setInterval (function(){
         timeLeft--;
         timerInput.textContent = timeLeft;
-    }, 1000);
     if(timeLeft<=0){
         quizOver();
         clearInterval(timeCount);
     };
+}, 1000);
 };
 
 // Question 1 options.
