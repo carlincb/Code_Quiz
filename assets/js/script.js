@@ -17,7 +17,6 @@ var userScore = 0;
 var finalScorePage = document.getElementById("finalScore");
 var highScorePage = document.getElementById("highscores");
 var scoreInput = document.getElementById("score");
-var results = document.getElementById("results");
 var highscoreDiv = document.getElementById("highscoreDiv");
 
 // Variables defined for questions.
@@ -250,6 +249,7 @@ document.querySelector("#initials").addEventListener("keypress", function(event)
         });
     };
 });
+
 // Function to clear high scores from local storage and page.
 clearHighScores.addEventListener("click", function(){
     localStorage.clear();
@@ -262,8 +262,3 @@ goBackButton.addEventListener("click", function(){
     highScorePage.style.display = "none";
     location.reload();
 });
-
-// results var 
-// Add event listener for click event on results
-// div bottom of page normally set to display none when click the li results var set this new div to display block
-// for each create p tag make inner HTML and append to new div tag

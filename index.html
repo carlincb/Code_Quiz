@@ -15,7 +15,7 @@
     <header>
         <nav>
             <ul>
-                <li id="results">View Highscores</li>
+                <li>Coding Practice</li>
                 <li>Time:
                     <span id="countdown"></span>
                 </li>
@@ -66,13 +66,11 @@
                     <button id="option4D">4D</button>
                 </ul>
             </div>
+            <!-- Added p tag so that JavaScript file can dynamically modify feedback depending on whether the answer was correct or not. -->
             <p id="answerFeedback"></p>
         </section>
         <section id="finalScore">
             <h2>All done!</h2>
-            <p>Your final score is:
-                <span id="score"></span>
-            </p>
             <form action="assets/js/script.js">
                 <label for="initials">Enter Initials:</label>
                 <input type="text" id="initials" name:="initials"/>
@@ -85,9 +83,9 @@
                 <button id="goBackButton">Go Back</button>
                 <button id="clearHighscores">Clear Highscores</button>
             </ul>
+            <!-- Added div tag to house p tag from JavaScript file displaying highscores when "Submit" button is clicked -->
             <div id="highscoreDiv"></div>
         </section>
-        <section id="displayResultsDiv"></section>
     </main>
     <!-- Added javascript link. -->
     <script src="assets/js/script.js"></script>
