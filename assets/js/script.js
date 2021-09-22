@@ -169,8 +169,9 @@ btn3D.addEventListener("click", function(){
 
 // Question 4 options.
 btn4A.addEventListener("click", function(){
+    timeLeft-=10;
     userScore = timeLeft;
-    answerFeedback.textContent = "Right!";
+    answerFeedback.textContent = "Wrong!";
     question4.style.display = "none";
     quizOver();
 });
@@ -192,9 +193,8 @@ btn4C.addEventListener("click", function(){
 });
 
 btn4D.addEventListener("click", function(){
-    timeLeft-=10;
     userScore = timeLeft;
-    answerFeedback.textContent = "Wrong!";
+    answerFeedback.textContent = "Right!";
     question4.style.display = "none";
     quizOver();
 });
