@@ -14,6 +14,7 @@
 - [Credits](#credits)
 - [License](#license)
 - [Links](#links)
+- [Contact](#contact)
 
 ## Installation
 
@@ -91,3 +92,7 @@ SOFTWARE.
 [Live Link](https://carlincb.github.io/Code_Quiz/)
 
 [GitHub Link](https://github.com/carlincb/Code_Quiz)
+
+## Contact
+
+Have questions? Please feel free to contact me at carlin.colleen@gmail.com.
