@@ -1,72 +1,96 @@
 /* General framework for paper layout set. No margins or fonts by default. Default fonts set. */
 * {
-    margin: 0;
-    padding: 0;  
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    }
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+}
 /* Default size of font set. */
 html {
-    font-size: 62.5%;
-    }
+  font-size: 62.5%;
+  color: white;
+}
 /* Background color of webpage set. */
 body {
-    background-color: rgb(246, 249, 252);
-    }
+  background-color: rgb(246, 249, 252);
+  background-image: url("../images/code2.jpg");
+}
 
 header {
-   display: flex;
-   justify-content: flex-end;
-   margin-right: 1.5rem;
-   font-size: 1.5rem;
-   color:coral;
-   height: 5%;
-   width: 95%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1.5rem;
+  font-size: 1.5rem;
+  color: rgb(167, 82, 51);
+  height: 5%;
+  width: 95%;
+}
+
+nav {
+  background-color: gainsboro;
+  width: fit-content;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    font-size: 2rem;
-    margin: 1.5rem;
-    height: 95%;
-    width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 2rem;
+  margin: 1.5rem;
+  height: 95%;
+  width: 95%;
 }
 
 h1 {
-    font-size: 3rem;
-    margin: 1rem;
-    color:cadetblue;
+  font-size: 3rem;
+  margin: 1rem;
+  color: rgb(94, 16, 16);
+  background-color: rgba(210, 217, 226, 0.603);
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
 
-p, h2 {
-    margin: 1rem;
+p,
+h2 {
+  margin: 1rem;
+  color: whitesmoke;
+  background-color: rgba(210, 217, 226, 0.603);
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
 
-#questionContainer, #question1, #question2, #question3, #question4, #finalScore, #highscores, #displayResultsDiv {
-    display: none;
+#questionContainer,
+#question1,
+#question2,
+#question3,
+#question4,
+#finalScore,
+#highscores,
+#displayResultsDiv {
+  display: none;
 }
 
 #answerFeedback {
-    border-top: .15rem solid black;
-    color:darkgray;
-    font-style: italic;
+  border-top: 0.15rem solid white;
+  color: white;
+  font-style: italic;
 }
 
 button {
-    background-color: cadetblue;
-    border-radius: .5rem;
-    border: .1rem solid gray;
-    padding: 1rem;
-    margin: 1rem;
-    width:fit-content;
-    height:fit-content;
-    color:cornsilk;
+  background-color: rgb(48, 78, 134);
+  border-radius: 0.5rem;
+  border: 0.1rem solid gray;
+  padding: 1rem;
+  margin: 1rem;
+  width: fit-content;
+  height: fit-content;
+  color: white;
 }
 
 input {
-    border:solid coral .2rem;
-    border-radius: .5rem;
-    color:cadetblue;
+  border: solid rgb(175, 72, 34) 0.2rem;
+  border-radius: 0.5rem;
+  color: black;
 }
